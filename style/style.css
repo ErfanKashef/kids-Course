@@ -1,0 +1,391 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: red;
+}
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.navbar {
+  margin-top: 20px;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 18px;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  align-items: center;
+}
+
+.mobile-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none; /* فقط در موبایل */
+}
+.free-trial {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+  color: #ff8a00;
+}
+
+#close-icon {
+  display: none; /* پیش‌فرض مخفی */
+}
+
+/* منوی موبایل */
+.mobile-menu {
+  display: none;
+  gap: 10px;
+  background: #f9f9f9;
+  padding: 10px;
+  list-style-type: none;
+  list-style: none;
+}
+
+.mobile-menu.show {
+  display: block;
+}
+
+/* فقط در موبایل دکمه و منوی موبایل دیده میشه */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+  .mobile-btn {
+    display: block;
+  }
+}
+
+/* --------------- header --------------- */
+/* ساختار کلی */
+.header-section {
+  padding: 2.5rem 0;
+}
+
+.header-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* متن و دکمه‌ها */
+.text-buttons {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .text-buttons {
+    text-align: left;
+  }
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.title {
+  font-size: 1.875rem; /* 3xl */
+  font-weight: 700;
+  color: #330656;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.25rem; /* 4xl */
+  }
+}
+
+.highlight {
+  color: #ff8a00;
+}
+
+.highlight-purple {
+  color: #bc70f8;
+}
+
+.highlight-orange {
+  color: #ff8a00;
+}
+
+.description {
+  font-size: 1.125rem; /* lg */
+  font-weight: 500;
+  margin: 0;
+  color: #000;
+}
+
+@media (min-width: 768px) {
+  .description {
+    font-size: 1.25rem; /* xl */
+  }
+}
+
+/* دکمه‌ها */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .buttons {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.btn {
+  font-weight: 600;
+  font-size: 1.125rem; /* lg */
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem; /* rounded-xl */
+  cursor: pointer;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .btn {
+    width: auto;
+  }
+}
+
+.btn-orange {
+  background-color: #ff8a00;
+}
+
+.btn-orange:hover {
+  background-color: #e57b00;
+}
+
+.btn-purple {
+  background-color: #bc70f8;
+}
+
+.btn-purple:hover {
+  background-color: #9f57e1;
+}
+
+/* آیکون داخل دکمه */
+.icon-gamepad {
+  stroke: white;
+}
+
+/* تصویر */
+.image-block {
+  flex: 1 1 33.3333%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.image-main {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-bee {
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  display: none;
+}
+
+.decor-rotate {
+  position: absolute;
+  bottom: 0;
+  right: 2.5rem;
+  width: 80px;
+  height: 80px;
+  background-color: #bc70f8;
+  border-radius: 1rem;
+  transform: rotate(45deg);
+  display: none;
+}
+
+/* نمایش تصویر و دکور در دسکتاپ */
+@media (min-width: 768px) {
+  .image-bee {
+    display: block;
+  }
+
+  .decor-rotate {
+    display: block;
+  }
+}
+
+/* ریسپانسیو - موبایل */
+@media (max-width: 767px) {
+  .header-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+}
