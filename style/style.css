@@ -164,7 +164,7 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  display: none; /* فقط در موبایل */
+  display: none;
 }
 .free-trial {
   display: flex;
@@ -175,7 +175,7 @@ body {
 }
 
 #close-icon {
-  display: none; /* پیش‌فرض مخفی */
+  display: none;
 }
 
 /* منوی موبایل */
@@ -192,7 +192,6 @@ body {
   display: block;
 }
 
-/* فقط در موبایل دکمه و منوی موبایل دیده میشه */
 @media (max-width: 768px) {
   .desktop-menu {
     display: none;
@@ -203,7 +202,7 @@ body {
 }
 
 /* --------------- header --------------- */
-/* ساختار کلی */
+
 .header-section {
   padding: 2.5rem 0;
 }
@@ -216,7 +215,6 @@ body {
   gap: 2.5rem;
 }
 
-/* متن و دکمه‌ها */
 .text-buttons {
   flex: 1 1 50%;
   display: flex;
@@ -238,7 +236,7 @@ body {
 }
 
 .title {
-  font-size: 1.875rem; /* 3xl */
+  font-size: 1.875rem;
   font-weight: 700;
   color: #330656;
   margin: 0;
@@ -246,7 +244,7 @@ body {
 
 @media (min-width: 768px) {
   .title {
-    font-size: 2.25rem; /* 4xl */
+    font-size: 2.25rem;
   }
 }
 
@@ -263,7 +261,7 @@ body {
 }
 
 .description {
-  font-size: 1.125rem; /* lg */
+  font-size: 1.125rem;
   font-weight: 500;
   margin: 0;
   color: #000;
@@ -271,7 +269,7 @@ body {
 
 @media (min-width: 768px) {
   .description {
-    font-size: 1.25rem; /* xl */
+    font-size: 1.25rem;
   }
 }
 
@@ -292,9 +290,9 @@ body {
 
 .btn {
   font-weight: 600;
-  font-size: 1.125rem; /* lg */
+  font-size: 1.125rem;
   padding: 0.5rem 1rem;
-  border-radius: 0.75rem; /* rounded-xl */
+  border-radius: 0.75rem;
   cursor: pointer;
   color: white;
   border: none;
@@ -327,7 +325,6 @@ body {
   background-color: #9f57e1;
 }
 
-/* آیکون داخل دکمه */
 .icon-gamepad {
   stroke: white;
 }
@@ -366,7 +363,6 @@ body {
   display: none;
 }
 
-/* نمایش تصویر و دکور در دسکتاپ */
 @media (min-width: 768px) {
   .image-bee {
     display: block;
@@ -377,7 +373,6 @@ body {
   }
 }
 
-/* ریسپانسیو - موبایل */
 @media (max-width: 767px) {
   .header-container {
     flex-direction: column-reverse;
@@ -388,4 +383,81 @@ body {
   .buttons {
     justify-content: center;
   }
+}
+/* --------------- code game --------------- */
+.codegame-section {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.codegame-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  flex-direction: column-reverse; /* موبایل: متن بالاست تصویر پایین */
+  text-align: center;
+}
+
+/* در دسکتاپ کنار هم */
+@media (min-width: 768px) {
+  .codegame-container {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.image-wrapper {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.codegame-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.text-wrapper {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #330656;
+}
+
+@media (min-width: 768px) {
+  .text-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.title {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.25rem; /* text-4xl */
+  }
+}
+
+.highlight-orange {
+  color: #ff8a00;
+}
+
+.description {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 400;
+  margin: 0;
 }
