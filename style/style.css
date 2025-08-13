@@ -396,7 +396,7 @@ body {
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
-  flex-direction: column-reverse; /* موبایل: متن بالاست تصویر پایین */
+  flex-direction: column-reverse;
   text-align: center;
 }
 
@@ -441,14 +441,14 @@ body {
 }
 
 .title {
-  font-size: 1.875rem; /* text-3xl */
+  font-size: 1.875rem;
   font-weight: 700;
   margin: 0;
 }
 
 @media (min-width: 768px) {
   .title {
-    font-size: 2.25rem; /* text-4xl */
+    font-size: 2.25rem;
   }
 }
 
@@ -457,7 +457,77 @@ body {
 }
 
 .description {
-  font-size: 1.125rem; /* text-lg */
+  font-size: 1.125rem;
   font-weight: 400;
   margin: 0;
+}
+
+/* --------------- playground --------------- */
+.playground-section {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.playground-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.playground-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  padding-bottom: 1.25rem;
+  text-align: center;
+}
+
+.playground-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.playground-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.playground-image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.game-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.zanbor-image {
+  position: absolute;
+  top: -3.5rem;
+  left: -0.75rem;
+  width: 100px;
+  height: auto;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .playground-title {
+    font-size: 1.875rem;
+  }
+
+  .playground-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .zanbor-image {
+    width: 70px;
+    top: -2.5rem;
+    left: -0.5rem;
+  }
 }
