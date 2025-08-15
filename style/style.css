@@ -131,7 +131,6 @@ table {
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: red;
 }
 .container {
   max-width: 80rem;
@@ -144,6 +143,7 @@ body {
   background: #fff;
   padding: 10px 20px;
   border-radius: 18px;
+  background-color: antiquewhite;
 }
 
 .nav-content {
@@ -186,6 +186,7 @@ body {
   padding: 10px;
   list-style-type: none;
   list-style: none;
+  background-color: antiquewhite;
 }
 
 .mobile-menu.show {
@@ -515,7 +516,6 @@ body {
   height: auto;
 }
 
-/* ریسپانسیو */
 @media (max-width: 768px) {
   .playground-title {
     font-size: 1.875rem;
@@ -529,5 +529,105 @@ body {
     width: 70px;
     top: -2.5rem;
     left: -0.5rem;
+  }
+}
+/* --------------- pricing --------------- */
+.pricing-section {
+  padding: 40px 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.highlight {
+  color: #ff8a00;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.card {
+  background: #e2c0ff;
+  border: 4px solid #52336a;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-subtitle {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 640px) {
+  .card {
+    width: 66%;
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3rem; 
+  }
+  .card {
+    width: 32%;
+  }
+  .card-title {
+    font-size: 1.875rem;
+  }
+  .card-subtitle {
+    font-size: 1.125rem;
+  }
+  .price {
+    font-size: 1.875rem;
+  }
+  .features {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    width: 24%;
   }
 }
