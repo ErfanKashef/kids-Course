@@ -607,7 +607,7 @@ body {
 
 @media (min-width: 768px) {
   .title {
-    font-size: 3rem; 
+    font-size: 3rem;
   }
   .card {
     width: 32%;
@@ -630,4 +630,99 @@ body {
   .card {
     width: 24%;
   }
+}
+/* --------------- footer --------------- */
+.custom-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.footer-title {
+  font-size: 1.875rem;
+  font-weight: 800;
+}
+
+.footer-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.highlight {
+  color: #ff8a00;
+}
+
+.bee-image {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  display: none;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .bee-image {
+    display: block;
+    width: 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bee-image {
+    width: 150px;
+  }
+}
+
+.footer-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  margin-top: 16px;
+}
+
+@media (min-width: 640px) {
+  .footer-buttons {
+    flex-direction: row;
+    width: auto;
+  }
+}
+
+.btn-primary {
+  background: #ff8a00;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-secondary {
+  background: white;
+  color: #ff8a00;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
 }
